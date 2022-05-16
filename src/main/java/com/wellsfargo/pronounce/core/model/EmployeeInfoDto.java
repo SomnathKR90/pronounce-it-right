@@ -8,6 +8,7 @@ public class EmployeeInfoDto {
     private String email;
     private String legalName;
     private String namePhoneme;
+    private String pronunciation;
     private String role;
 
     public Long getEmpId() {
@@ -20,6 +21,14 @@ public class EmployeeInfoDto {
 
     public String getEmpName() {
         return empName;
+    }
+    
+    public String getPronunciation() {
+        return pronunciation;
+    }
+
+    public void setPronunciation(String pronunciation) {
+        this.pronunciation = pronunciation;
     }
 
     public void setEmpName(String empName) {

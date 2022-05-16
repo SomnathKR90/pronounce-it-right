@@ -55,9 +55,7 @@ configurations {
             preferProjectModules()
             cacheDynamicVersionsFor 0, 'seconds'
         }
-        exclude group: "commons-logging", module: "commons-logging"
-        exclude group: "ch.qos.logback", module: "logback-classic"
-        exclude group: "org.apache.logging.log4j", module: "log4j-to-slf4j"
+
         exclude group: "com.mchange", module: "c3p0"
         exclude group: "or", module: "c3p0"
         exclude group: 'junit', module: 'junit'

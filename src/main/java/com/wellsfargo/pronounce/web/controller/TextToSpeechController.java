@@ -20,8 +20,14 @@ public class TextToSpeechController {
     private ITextToSpeechService textToSpeechService;
 
     @GetMapping("/{inputText}")
-    public void getVoiceOutput(@PathVariable("inputText") final String inputText) {
-        textToSpeechService.getVoiceOutput(inputText);
+    public Object getVoiceOutput(@PathVariable("inputText") final String inputText) {
+        return textToSpeechService.getVoiceOutput(inputText);
+
+    }
+    
+    @GetMapping("/accessToken")
+    public Object getAccessToken() {
+        return textToSpeechService.getAccessToken();
 
     }
 

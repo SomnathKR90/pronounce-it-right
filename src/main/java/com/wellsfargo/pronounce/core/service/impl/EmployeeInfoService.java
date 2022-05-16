@@ -27,6 +27,7 @@ public class EmployeeInfoService implements IEmployeeInfoService {
     public EmployeeInfoDto saveEmployeeInfo(EmployeeInfoDto employeeInfo) {
     	EmployeeInfo emp = repo.findById(employeeInfo.getEmpId()).get();
     	emp.setNamePhoneme(employeeInfo.getNamePhoneme());
+    	emp.setPronunciation(employeeInfo.getPronunciation());
     	return mapToDto(repo.save(emp));
     }
 
@@ -44,6 +45,7 @@ public class EmployeeInfoService implements IEmployeeInfoService {
     	dto.setEmpName(entity.getEmpName());
     	dto.setLegalName(entity.getLegalName());
     	dto.setNamePhoneme(entity.getNamePhoneme());
+    	dto.setPronunciation(entity.getPronunciation());
     	dto.setRole(entity.getRole());
     	dto.setTitle(entity.getTitle());
     	
